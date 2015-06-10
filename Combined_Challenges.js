@@ -737,6 +737,238 @@ var test = function(userCode){
 }
 
 
+//array.push
+{
+  title: "Pushing the playlist",
+  content: 'function pushPlayList(){\n\n //Initialize and declare your variable. \n//Add three songs using the push method. \nreturn SuperAwesomePartyPlayList }',
+  instructions: "You are planning to host a party,  and you want this to be the best party ever. /
+  So, being the awesome party host that you are, you would like to offer your guest the option to add their /
+  favorite song onto your itunes playlist. Three of your friends have already text you their song request, and rather /
+  than writing it down and manually adding the songs to the playlist. You decided it would be a good opportunity to use /
+  your javascript prowess. 
+  <br> Since, a playlist is just a list of songs, and that the order in which the songs will play is important, /
+  you can use an Array to solve your problem! Luckily for us, in javascript, we have a push method, which allows us to /
+  add items into a list. 
+  <br> 
+  <br>//Example: 
+  <br>//The PlayList Name = AwesomePlayListForMyEpicParty.
+  <br>Diana’s song request: ‘Frozen: Let it go’,
+  <br>Tina’s song request: ‘Lion King: Circle of Life’,
+  <br>Michelle’s song request: ‘Pharrell Williams: Happy’
+  <br>
+  <br>// An array is a collection of items where the order of these items are important.
+  <br>// Awesome! We have an awesome playlist created:
+  <br>var AwesomePlayListForMyEpicParty = [];
+  <br>AwesomePlayListForMyEpicParty.push(‘Frozen: Let it go’);
+  <br>AwesomePlayListForMyEpicParty.push(‘Lion King: Circle of Life’);
+  <br>AwesomePlayListForMyEpicParty.push(‘Pharrell Williams: Happy’);
+  <br>
+  Now you try and create a playlist called “SuperAwesomePartyPlayList” and add three songs into it. 
+  ",
+  hint1: "Make sure you have something to left of the method you are calling.",
+  hint2: "Are you pushing the song titles as a STRING into the array?",
+  testCode: ,
+  pointValue: 50
+}
+
+
+//for loop
+{
+  title: "For every text message",
+  content: 'function texingForLoop(){\n\n for(//Delete and fill out with expression){//Write the statement to be executed.} //no need to have or use keyword return }',
+  instructions: "Oh no, you got caught texting in class. As a punishment, you have to stay after class and write out, “ I will not text during /
+    class.” 30 times. You promised your best friend, that you would go to the mall with her to help pick out a dress, so /
+    you can’t waste time on this. 
+    <br>
+    After thinking for a bit, you realize, you can use what you learned in class to do this. Good decision, you /
+    keep your promise with your friend and score some brownie points with your teacher! A For loop is one of the ways /
+    in JavaScript that allow Coder Girls to execute a command or a series of commands for a certain amount of time.
+    <br>
+    The basic structure of a for loop is:
+    <br>
+    for ( expression ) {
+    <br>//statements to be executed based on the condition provided
+    <br>}
+    <br>
+    <br> A for loop will execute any statements within its curly braces, so long as the condition is met.
+    <br>
+    <br> For example:
+    <br> for (var i = 2; i < 10; i+=2) {
+    <br>//the statements written here will be executed 5 times. 
+    <br>}
+    <br>
+    The first part of the expression is initializing the variable i. Here, we are setting the variable i to be 2. In other words, we are creating a counter variable, that we can increment later.
+    <br>(var i = 2;) // Because variable i hold the number 2, our counter will begin starting at 2.
+    <br>If we had set i = 0, this for loop would have started with the counter at 0.
+    <br>
+    The second part of the expression is a condition. A condition is checked before each loop runs, and if it is true, the statement is executed.
+    <br>(var i = 2; i < 10) //Here we are setting the upperbound our for loop, in otherwords, we are telling the for loop when to stop. /
+    <br>So as long as i is less than 10, this for loop will keep iterating and execute the conidition provided.
+    <br>
+    Since, variable i is 2, and because variable i at this point in time and is less than 10, a statement is executed.
+    <br>(var i = 2; i < 10;  i+=2) {
+    <br>'print me out' // this statement 'print me out' is printed out
+    <br>}
+    <br>
+    The last part of our expressions, is to evaluate at the end of each time the loop is evaluated. /
+    In other words, after it checks to see if the condition is true, it will increment the variable i from 2 to 4, because we are incrementing i by 2. /
+    i += 2, is shorthand for saying i + 2 = i. So if variable i was set to 2 and we add 2 to i, on our next iteration, i will be 4.
+    (Fun Fact: Besides, incrementing the variable i, you can also decrement variable i. This requires a bit of restructuring, so we will do it another time.)
+    <br>
+    Quick! Write a for loop which will execute the statement: “I will not text during class.” 30 times.", 
+  hint1: "Double check your expression",
+  hint2: "Double check your expression",
+  testCode: ,
+  pointValue: 50
+}
+
+// operators
+
+{
+  title: "Operating on operators",
+  content: 'function OperatingOnOperators(){\n\t //var a = 10, var b = 20, var c = 27, var d = 12, var e = 0; \n\t //var a = 2  5; \n\tvar b = 40 2; \n\tvar c = 22 5; \n\tvar d = 27 15; \n\t var e = 4 2;} //no need to have or use keyword return }',
+  instructions: "Here are four operators avaiable for you to use in javascript. /
+  <br> (+)for addition, (-) subtraction, (*) multiplication, (/) division, and (%) modulus.
+  <br>
+  Addition (+)
+  <br> var x = 0; var y = 2;
+  <br> var add = x + y;
+  <br> add now holds the number 2;
+  <br> Shorthand: We want to increment variable 2 by two. Rather than storing the result in a new variable we can alternatively increase q by 2 /
+  and then update the variable q with the new number.
+  <br> var q = 10; var w = 2;
+  <br> q += w; // q = q + w; 
+  <br> Or if we dont want to store 2 in a variable we can do this: 
+  <br> q += 2; // q = q + 2; 
+  <br>
+  Subtraction (-)
+  <br> var x = 10; var y = 2;
+  <br> var subtract = x - y;
+  <br> subtact now holds the number 10;
+  <br> Shorthand:
+  <br> var q = 10; var w = 2;
+  <br> q -= w; // q = q - w; 
+  <br> Or if we dont want to store 2 in a variable we can do this: 
+  <br> q -= 2; // q = q - 2;
+  <br>
+  Multiplication (*)
+  <br> var x = 12; var y = 2;
+  <br> var multi = x * y;
+  <br> multi now holds the number 24;
+  <br> Shorthand:
+  <br> var q = 10; var w = 2;
+  <br> q *= w; // q = q * w; 
+  <br> Or if we dont want to store 2 in a variable we can do this: 
+  <br> q *= 2; // q = q * 2;
+  <br>
+  Divsion (/)
+  <br> var x = 24; var y = 2;
+  <br> var divide = 24 / 2;
+  <br> divide now holds the number 12;
+  <br> Shorthand:
+  <br> var q = 10; var w = 2;
+  <br> q /= w; // q = q / w; 
+  <br> Or if we dont want to store 2 in a variable we can do this: 
+  <br> q /= 2; // q = q / 2;
+  <br>
+  Modulus (%)
+  <br> (%) returns the remainder, so for example if 5%2 would return 1. Lets say we would like to know if any given number is an even number. /
+  We can use modulus here to help us out. If the remainder is 1, not zero, then we know it is an odd number. /
+  <br> (Zeros tell us that the number before % is an even number.) Try it out: 5 % 2, 19 % 2, 240 % 2, 1860 % 2.
+  <br> Shorthand:
+  <br> var q = 10; var w = 2;
+  <br> q %= w; // q = q % w; 
+  <br> Or if we dont want to store 2 in a variable we can do this: 
+  <br>q %= 2; // q = q % 2;
+  <br>
+  <br>
+  Increment (++)
+  <br> ++ is a shortcut to increment a varible that is storing a number by 1.
+  <br> var x = 10;
+  <br> x++ , will return 11;
+  <br>
+  <br>
+  Decrement (--)
+  <br> -- is a shortcut to decrement a variable that is storing a number by 1.
+  <br> var x = 0;
+  <br> x-- , will return -1;
+  <br>
+  If you tried the above ++ or -- in your browser console.log, you will notice that your value does not print the correct value until you enter the variable. \
+  <br> The reason being is because when you write the statement x++ or x--, javascript is first, evaluting the varaible x and then incrementing or decrementing the variable. \
+  <br> This is known as a post increment/decrement. The variable will not be incremented or decremented untill after javascript has done its tasks.
+  <br> So, instead we can use something called a pre increment/Decrement. ++x or --x, this tells javascript to increment/decrment the variable first, and then do your stuff.
+  <br>
+  Fill in the correct operators to pass the challenge.
+  <br>
+  ", 
+  hints1: "Sorry, no hints!",
+  hints2:"Sorry, no hints!",
+  testCode: ,
+  pointValue: 50
+} 
 
 
 
+// integers/numbers
+
+{
+  title: "+2 to that price!",
+  content: 'function a(){\n //variables \n\t var priceOfCoat = 3; \n\t "This coat cost" + priceOfCoat + "dollars"; \n\t "The total cost for this purchase with tax" \n\t//no need to have or use keyword return }',
+  instructions: "One data type in javascript is a Number. Numbers in javascript are numeric values we use in math, so we can do add, subtract, divide or multiply with them./
+  <br> Try it out in your console.log(). 3 + 3 will give you 6. However, if we wrap the number 3 inside quotes, '3' javascript will do what is called a type conversion. '3' tell javascript to change /
+  from a number data type into a string data type. So, when we try to add '3' to 3, we will get '33' instead of 6. Wierd, right? But wait, there is an advantage for this though, say you decared a variable call priceOfCoat to be 5. /
+  and you want to be able to print out the statement, 'This coat cost x amount of dollars.'. Rather then hardcording(writing) the number 3, you can store it in a variable. That way, next time, changing the price will be easy. /
+  In this scenario, using the (+) in this case will allow you to join data types together, whether be are strings or number. 
+  <br>
+  <br> var price = 3;
+  <br> This coat costs' + priceOfCoat + 'dollars';
+  <br> This will return 'This coat costs 3 dollars'. Notice that the data we stored in the variable is a number, but because we are using (+) with a string /
+  3 is now a string ('3').
+  <br> What if we want to join a number with a string and expect the join of the two to be a number?
+  <br> For example: '3' + 5 = 8;
+  <br> To do this, we need to add an extra (+) infront of the '3' to tell javascript to convert it back into a number from a string.
+  <br> So +'3' + 5 will give us 8 instead of 35.
+  <br>
+  <br> Expanding on the example above, add a variable call taxes and set it hold the number 2./
+  <br>Complete the statement by using the taxes variable and adding to priceOfCoat, /
+  so the results should be:
+  <br>'This coat costs 3 dollars. The total cost for this purchase with tax is 7 dollars'
+   ",
+  hints1: "Make sure you are wrapping your strings with quotes, either single (') or doubles(""), and not on the variables",
+  hints2:  "Are you missing an additional (+) operator ?",
+  testCode: ,
+  pointValue: 50
+}
+
+// logical operators
+{
+  title: "Ice cream for Jane",
+  content: 'function iceCream(){\n\n var janesChoice ;var vanilla = true, var chocoloate = true; var strawberry = false; ; \nvar doubleScoopIcecreamCone = true; \njanesChoice = //write the logical expression here \n\n//no need to have or use keyword return }',
+  instructions: "
+  <br>In javascript, the || represents the logical OR operator. 
+  <br>True && False will return True.
+  <br>False && True will return True.
+  <br>True && True will return True.
+  <br>False && False will return False.
+  <br>
+  <br>Additionaly, we have &&, the locial AND operator. 
+  <br>True && True will return True. 
+  <br>False && False will return False.
+  <br>False && True will return False.
+  <br>True && False will return False.
+  <br>
+  <br>! in javascript give you the ability to inverse something.
+  <br>var atHome = true;
+  <br>!atHome  // is now false when javascript evalutes it. 
+  <br>We can also do !!atHome which changes !atHome from above to false, and then because of the second !, back to true. (Side note, you can not do more than two !!). /
+  <br>This also converts anything into its boolen format, either true or false. So for example 0, is a falsy value. So, if you do !!0, javascript will output the false boolean.
+  <br>
+  Fill in the missing logical operators to achieve the desired results, so that the variable janesChoice will evaulate true according to her prefernce.
+  <br>
+  Jane would like to have either a single scope of vanillia or strawberry icecream cone.
+  ",
+  hints1: "Are you wrapping your expressions in parens? ((x || y) && (y && z))",
+  hints2:  "Are you using the NOT operator? !(a || b)",
+  testCode: ,
+  pointValue: 50
+}
