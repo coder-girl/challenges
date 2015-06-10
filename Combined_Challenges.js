@@ -972,3 +972,226 @@ var test = function(userCode){
   testCode: ,
   pointValue: 50
 }
+
+// BOOLEANS 
+
+{
+  title: "Billions of booleans",
+  content: 'var test1 = 5 < 3;\n var result1 = // add the correct boolean here!;\n\nvar test2 = 10 > 6;\n var result2 = // add the correct boolean here!;\n\n',
+  instructions: "At this point, you've already seen several primitive data types, including strings, numbers, and objects. Another common \
+  data type is a boolean, which simply distinguishes between two possibilities: `true` or `false`. Notice that these values are \
+  neither strings nor variables - they are their own type altogether. Booleans are particularly useful for comparisons, such as `3 > 2` \
+  or `3 < 2`. The > and < signs are the traditional symbols for “is greater than” and “is less than”, respectively. So `3 > 2` evaluates \
+  to `true`, and 3 < 2 evaluates to `false`.<br><br>In the editor, assign the correct boolean to `result1` and `result2` based on the \
+  corresponding `test1` and `test2` comparisons.",
+  hint1: "Remember that since `true` and `false` aren't strings, they don't require quotation marks. ",
+  hint2: "The value of `result1` should equal the value of `test`. So if `result3 = 6 < 12`, then `test3 = true` would be the correct assignment.",
+  testCode: 6,
+  pointValue: 100
+}
+
+var test = function(userCode){
+  var result = {
+    pass: false,
+    message: "Looks like your code wasn't quite right. Please try again!"
+  }
+
+  var codeResponse = eval(userCode);
+
+  if (result1 === false && result2 === true){
+    result.pass = true;
+    result.message = "Congratulations! You passed!";
+  }
+
+  if (typeof result1 === "string" || typeof result2 === "string"){
+    result.message = "Remember not to use quotation marks around `true` and `false`";
+  } 
+
+  return result
+}
+
+var test = function(userCode){
+  var result = {
+    pass: false,
+    message: "Looks like your code wasn't quite right. Please try again!"
+  }
+  var codeResponse = eval(userCode);
+
+  if (codeResponse === 2023948221){
+    result.pass = true;
+    result.message = "Congratulations! You passed!";
+  }
+
+  if(codeResponse === undefined){
+    result.message = "Oops! Make sure the key you entered is a string!"
+  } 
+
+  return result
+}
+
+// OBJECTS 2
+
+{
+  title: "More on Objects",
+  content: 'var tasks = {\n  "monday": ["Finish history project"],\n  "tuesday": ["Wash dishes", "Turn in Math Homework"],\n  \
+  "thursday": ["Go to dance practice", "Start book report"],\n }',
+  instructions: "We've added another object to the editor. The `tasks` object contains a list of tasks that need to be accomplished on certain\
+  days of the week. Notice that we're storing arrays within our object, which is totally ok. Objects can even store other objects as values \
+  (which themselves could have objects as values... you get the idea). In the previous challenge, you learned that object values can be \
+  accessed using bracket notation - if I wanted Tuesday's tasks, I could write `tasks['tuesday']`. But there's another way we can retrieve \ 
+  values from an object called called 'dot notation': `tasks.tuesday`. To convert from bracket notation to dot notation, we simply remove the\
+  quotation marks, and replace the brackets with a period.<br><br>Try it out in the editor - use dot notation to retrieve Monday's tasks.", 
+  hint1: "Remember, you don't need the quotes!",
+  hint2: "Don't forget to include the period between the object name and the key name",
+  testCode: 12,
+  pointValue: 100
+}
+
+var test = function(userCode){
+  var result = {
+    pass: false,
+    message: "Looks like your code wasn't quite right. Please try again!"
+  }
+
+  var codeResponse = eval(userCode);
+
+  if (codeResponse.pop() === "Finish hinstory project"){
+    result.pass = true;
+    result.message = "Congratulations! You passed!";
+  }
+
+  if (codeResponse.length && codeResponse.length === 2){
+    result.message = "Looks like you may have gotten your days mixed up - make sure you're returning Monday's tasks!";
+  } 
+
+  return result
+}
+
+// EXPRESSIONS
+
+{
+  title: "Expressive Expressions",
+  content: 'var value1 = 5 === 6;\nvar value2 = "two wrongs" !== "one right";',
+  instructions: "Booleans and operators are core components of expressions. Expressions are simply defined as any unit of code that \
+  evaluates to a value. You've already seen several examples of expressions at this point: valid expressions include variable assignments\
+  (`var x = 7`), mathematical operations (`5 * 7`), string operations (`'my' + 'string'`), and logical operations - operations that \
+  evaluate to `true` or `false` (`5 < 6`).<br><br>In addition to the things you have already seen, other common operators that \
+  frequently appear in expressions include >= (greater than or equal to), <= (less than or equal to), == (equal to), and != (not equal to).\
+  For example, all of the following logical expressions would evaluate to `true`: `'Mark' != 'Marcus'`, `5 == 5`, `'a' <= 'b'`, and /
+  `2 >= 2`.<br><br>Try it out. Create an expression using either == or != that compares `value1` and `value2` and evaluates to `true`."
+  hint1: "First, create a theory about what value you expect `value1` and `value2` to take assume. Then choose the appropriate operator",
+  hint2: "Your code should look like `value1 ? value2`, where the question mark is replaced by the correct operator.",
+  testCode: 8,
+  pointValue: 100
+}
+
+var test = function(userCode){
+  var result = {
+    pass: false,
+    message: "Looks like your code wasn't quite right. Please try again!"
+  }
+
+  var codeResponse = eval(userCode);
+
+  if (codeResponse === true){
+    result.pass = true;
+    result.message = "Congratulations! You passed!";
+  }
+
+  if (codeResponse === false){
+    result.message = "Looks like you may have used the wrong operator. Try again!"
+  } 
+
+  return result
+}
+
+// FUNCTIONS 1
+
+{
+  "title": "Let's get functional",
+  "content": '// This is the skeleton of a function\nvar greetGuest = function(guestName) {\n  var greeting = "Hi, ";\n  // write your code here! 
+  \n\n  return greeting\n}',
+  "instructions": "At this point, you've learned many useful ways to store and access information using variables. But what if \
+  we want a way to save entire sections of code, which we could then call on to use at some time in the future? This is where functions \
+  come into play. Functions are a core component of programming - they help us structure our code, and by wrapping a part of a program in some \
+  named value, they greatly reduce code repetatition.<br><br>Imagine you are having some friends over, and want to program a way \
+  to greet guests as they arrive. It would seem like quite a bit of work to write out a distinct greeting procedure for \
+  each guest that shows up. Instead, you'd probably want to define a standard greeting method, and then apply that method with each \
+  guest in turn. Let's write a function to help handle the greetings.<br><br>As the code in the editor demonstrates, functions are made \ 
+  up of a few components. First, we declare a variable, `greetGuest`, in the normal way. We then set the variable equal to a `function`, \
+  which has one parameter, called `guestName`. You can think of parameters as named placegholders for actual values that will be passed \
+  to the function when it is used in the future. Finally, the body of the function is contained inside the {} brackets. This is the code \ 
+  that actually gets executed when the function is used. Notice the `return` statement at the end of our function. The value that is returned\
+  at the end of a function (in our case, `greeting`, gets passed back to the caller for future use. <br><br>\
+  Let's dive in. The function in the editor isn't quite right. We want our greeting to include the name of each guest we are addressing. \
+  Add a line of code to the function so that `greeting` includes the `guestName` when it's returned.", 
+  "hint1": "You can concatenate strings using the + operator. For example, if `var name = Mark`, `greeting + name` would return 'Hi, Mark'.",
+  "hint2": "If you want to store a string concatenation in an existing variable, you can use the += operator. So if you ran `greeting += name;`\
+  `greeting` would then be equal to 'Hi, Mark'.",
+  "testCode": 15,
+  "pointValue": 50
+}
+
+var test = function(userCode){
+  var result = {
+    pass: false,
+    message: "Looks like your code wasn't quite right. Please try again!"
+  }
+  eval(userCode);
+
+  var test = greetGuest("Stephen");
+
+  if (test === "Hi, Stephen" || test === "Hi, Stephen."){
+    result.pass = true;
+    result.message = "Congratulations! You passed!";
+  }
+
+  if (test === undefined){
+    result.message = "Don't forget to return the augmented `greeting`!";
+  } else if (test === "Hi, ") {
+    result.message = "Looks like the greeting string isn't being modified before gets returned. Be sure to store any modifications you make \
+    to the string get stored to the `greeting` variable."
+  }
+
+  return result
+}
+
+// FUNCTIONS 2
+
+{
+  title: "Function Invocation vs. Funcation Definition",
+  content: 'var divideByTwo = function(number) {\n  return number / 2;\n};\n\nvar scoreGoal = function(score) {\n  return ++score;\n}; \
+  \n // add your code below',
+  instructions: "In the last challenge, you learned how to define a block of code in a function for later use. Now we'll show you how to \
+  use a function after it has been defined.<br><br>We have added a `divideByTwo` function to the editor. Let's say we want to use this function
+  to calculate half of 1,348. In order to use the function, we simply have to invoke, or call, the function with a specific syntax: \
+  `divideByTwo(1348)`; This function invocation consists of (1) the function name, (2) an open parenthesis, (3) any arguments that we want \
+  to pass to our function, and (4) a closed parenthesis. Function arguments are the values that we want the parameters from the code definition \
+  to take on when the function code is executed. If a function requires more than one argument, they are separated by commas within the parentheses \
+  in the function invocation.<br><br>Give it a try - in the editor, call the `scoreGoal` function, passing in an initial score of 5." 
+  hint1: "Remember that capitalization matters - `scoregoal` and `scoreGoal` are not the same!",
+  hint2: "Do not forget to pass the initial score value to the invocation by adding the value between the parentheses.",
+  testCode: 16,
+  pointValue: 100
+}
+
+var test = function(userCode){
+  var result = {
+    pass: false,
+    message: "Looks like your code wasn't quite right. Please try again!"
+  }
+  var codeResponse = eval(userCode);
+
+  if (codeResponse === 6){
+    result.pass = true;
+    result.message = "Congratulations! You passed!";
+  }
+
+  if(codeResponse === NaN){
+    result.message = "Oops! Make sure you pass the correct argument between the parentheses!"
+  } 
+
+  return result
+}
+
+
