@@ -70,29 +70,24 @@ var conditionalTest = function(userCode){
 //Challenge: Variables
 
 {
-
-  'title': 'Puppies v. Kittens',
-  'instructions': 'JavaScript variables can be thought of like nicknames.  If you had a dog named Santa\'s Little Helper, you might not want to have \
-  to say Santa\'s Little Helper every time you call him.  You might instead take to calling him Fuzzball.  Fuzzball then would be a variable \
-  that refers to Santa\'s Little Helper.  You would declare this variable by writing: \
-  <br> var Fuzzball = "Santa\'s Little Helper"; /
-
-  <br>When you first define a variable you need to use that "var" keyword.  After that, you can change what Fuzzball is referring to without stating "var".\
-    For instance, if Santa\'s Little Helper gets a furcut and you decide that your cat, Grinchy is more like a Fuzzball, \
+  "title": "Puppies v. Kittens",
+  "instructions": "JavaScript variables can be thought of like nicknames.  If you had a dog named Santa's Little Helper, you might not want to have \
+  to say Santa's Little Helper every time you call him.  You might instead take to calling him Fuzzball.  Fuzzball then would be a variable \
+  that refers to Santa's Little Helper.  You would declare this variable by writing: \
+  <br> `var Fuzzball = 'Santa's Little Helper';` /
+  <br><br>When you first define a variable you need to use that 'var' keyword.  After that, you can change what Fuzzball is referring to without stating \"var\".\
+  <br><br>For instance, if Santa's Little Helper gets a furcut and you decide that your cat, Grinchy is more like a Fuzzball, \
   then you could reassign Fuzzball to Grinchy by just writing: \
-  <br>Fuzzball = "Grinchy";
-  <br>Then, whenever you call Fuzzball you would be calling Grinchy (though she might ignore you).  \
-  <br>You can pick pretty much anything you want for variable names so long as (1) they aren\'t a few reserved magical JavaScript words, (2) they can\'t \
-    start with a number, and (3) they can\'t have spaces.  Note that capitalization matters.  Fuzzball is not the same as fuzzball.\
-  <br>In the editor, define the variable "DuchessFlufferton" and assign it to either "puppy" or "kitten".',
-  'content': 'var puppiesVkittens = function(){ \
-    \n //enter code here \
-    \n return DuchessFlufferton \
-    \n }',
-  'testCode': 1,
-  'pointValue': 20,
-  'hint1': "Did you make sure to start with the 'var' keyword?", 
-  'hint2': "Did you make sure there is no space between 'Duchess' and 'Flufferton'?"
+  <br>`Fuzzball = 'Grinchy';`\
+  <br><br>Then, whenever you call Fuzzball you would be calling Grinchy (though she might ignore you).  \
+  <br><br>You can pick pretty much anything you want for variable names so long as (1) they are not a few reserved magical JavaScript words, (2) they cannot\
+    start with a number, and (3) they cannot have spaces.  Note that capitalization matters.  Fuzzball is not the same as fuzzball.\
+  <br><br>In the editor, define the variable 'DuchessFlufferton' and assign it to either 'puppy' or 'kitten'.",
+  "content": "//enter code on next line",
+  "testCode": 3,
+  "pointValue": 175,
+  "hint1": "Did you make sure to start with the 'var' keyword?", 
+  "hint2": "Did you make sure there is no space between 'Duchess' and 'Flufferton'?"
 }
 
 
@@ -335,11 +330,15 @@ var stringLoopTest = function(userCode){
 
 {
   'title': 'String Theory',
-  'instructions': 'In JavaScript you can put any keyboard characters you want in quotes and you have created a "string".  A string can be made up of a single letter, \
-  a single word or whole paragraphs.  The sky is the limit.  In the editor, create a string that contains your favorite hashtag for selfies.',
-  'content': '//type your string here' ,
-  'testCode': 2,
-  'pointValue': 10,
+  'instructions': 'In JavaScript you can put any keyboard characters you want in quotes and you have created a "string".  \
+  The quotes can be single or double quotes but they have to match.  <br><br>A string can be made up of a single letter, \
+  a single word or whole paragraphs.  The sky is the limit.  <br><br>In the editor, create a string that contains your favorite hashtag for selfies.\
+  <br><br>Note that in the editor, it now says "//type your string here".  By putting "//" before text, it turns the entire line into \
+  a comment that is ignored by JavaScript.  It allows you to write comments about your code to remind your later self what you did. \
+  So, make sure to write your brilliant new string on line 2.  Otherwise, if you write it on line 1 it will be ignored.',
+  'content': '//type your string on the next line',
+  'testCode': 1,
+  'pointValue': 100,
   'hint1': 'Did you place your string in matching quotes (either both single quotes or both double quotes)?',
   'hint2':  'My answer would be "#filtersforever".'
 }
@@ -513,11 +512,9 @@ var lengthTest = function(userCode){
   'content': 'var bag = {"gloves": true, "goggles": false, "helmet": true, "jacket": true, "lip balm": true, "sunscreen": false, "boots":true, "snowboard": true}\
   \n\n var checkBag = function(){ \
   \n\n var stillNeedToPack = []; \
-  \n\n 
+  \n\n \
   \n\n //insert your for in loop here\
-  \n\n
-
-
+  \n\n\
   \n\n return stillNeedtoPack;  
   }',
   'testCode': 7,
@@ -825,86 +822,39 @@ var test = function(userCode){
 // operators
 
 {
-  title: "Operating on operators",
-  content: 'function OperatingOnOperators(){\n\t //var a = 10, var b = 20, var c = 27, var d = 12, var e = 0; \n\t //var a = 2  5; \n\tvar b = 40 2; \n\tvar c = 22 5; \n\tvar d = 27 15; \n\t var e = 4 2;} //no need to have or use keyword return }',
-  instructions: "Here are four operators avaiable for you to use in javascript. /
-  <br> (+)for addition, (-) subtraction, (*) multiplication, (/) division, and (%) modulus.
-  <br>
-  Addition (+)
-  <br> var x = 0; var y = 2;
-  <br> var add = x + y;
-  <br> add now holds the number 2;
-  <br> Shorthand: We want to increment variable 2 by two. Rather than storing the result in a new variable we can alternatively increase q by 2 /
-  and then update the variable q with the new number.
-  <br> var q = 10; var w = 2;
-  <br> q += w; // q = q + w; 
-  <br> Or if we dont want to store 2 in a variable we can do this: 
-  <br> q += 2; // q = q + 2; 
-  <br>
-  Subtraction (-)
-  <br> var x = 10; var y = 2;
-  <br> var subtract = x - y;
-  <br> subtact now holds the number 10;
-  <br> Shorthand:
-  <br> var q = 10; var w = 2;
-  <br> q -= w; // q = q - w; 
-  <br> Or if we dont want to store 2 in a variable we can do this: 
-  <br> q -= 2; // q = q - 2;
-  <br>
-  Multiplication (*)
-  <br> var x = 12; var y = 2;
-  <br> var multi = x * y;
-  <br> multi now holds the number 24;
-  <br> Shorthand:
-  <br> var q = 10; var w = 2;
-  <br> q *= w; // q = q * w; 
-  <br> Or if we dont want to store 2 in a variable we can do this: 
-  <br> q *= 2; // q = q * 2;
-  <br>
-  Divsion (/)
-  <br> var x = 24; var y = 2;
-  <br> var divide = 24 / 2;
-  <br> divide now holds the number 12;
-  <br> Shorthand:
-  <br> var q = 10; var w = 2;
-  <br> q /= w; // q = q / w; 
-  <br> Or if we dont want to store 2 in a variable we can do this: 
-  <br> q /= 2; // q = q / 2;
-  <br>
-  Modulus (%)
-  <br> (%) returns the remainder, so for example if 5%2 would return 1. Lets say we would like to know if any given number is an even number. /
-  We can use modulus here to help us out. If the remainder is 1, not zero, then we know it is an odd number. /
-  <br> (Zeros tell us that the number before % is an even number.) Try it out: 5 % 2, 19 % 2, 240 % 2, 1860 % 2.
-  <br> Shorthand:
-  <br> var q = 10; var w = 2;
-  <br> q %= w; // q = q % w; 
-  <br> Or if we dont want to store 2 in a variable we can do this: 
-  <br>q %= 2; // q = q % 2;
-  <br>
-  <br>
-  Increment (++)
-  <br> ++ is a shortcut to increment a varible that is storing a number by 1.
-  <br> var x = 10;
-  <br> x++ , will return 11;
-  <br>
-  <br>
-  Decrement (--)
-  <br> -- is a shortcut to decrement a variable that is storing a number by 1.
-  <br> var x = 0;
-  <br> x-- , will return -1;
-  <br>
-  If you tried the above ++ or -- in your browser console.log, you will notice that your value does not print the correct value until you enter the variable. \
-  <br> The reason being is because when you write the statement x++ or x--, javascript is first, evaluting the varaible x and then incrementing or decrementing the variable. \
-  <br> This is known as a post increment/decrement. The variable will not be incremented or decremented untill after javascript has done its tasks.
-  <br> So, instead we can use something called a pre increment/Decrement. ++x or --x, this tells javascript to increment/decrment the variable first, and then do your stuff.
-  <br>
-  Fill in the correct operators to pass the challenge.
-  <br>
-  ", 
-  hints1: "Sorry, no hints!",
-  hints2:"Sorry, no hints!",
-  testCode: ,
-  pointValue: 50
+  "title": "Operation Conquer Operators",
+  "content": "",
+  "instructions": "You know how we said earlier that you can do math in JavaScript.  We were not kidding.\
+  <br> Check out a few of the operators available to you: \
+  <br>Addition (+)\
+  <br> 2 + 2 = 4\
+  <br>Subtraction (-)\
+  <br> 10 - 2 = 8\
+  <br>Multiplication (*)\
+  <br> 2 * 12 = 24\
+  <br>Divsion (/)\
+  <br>  24/2 = 12\
+  <br>Modulo (%)\
+  <br> (%) returns the remainder from dividing two numbers, so 5 % 2 = 1. \
+  <br>  Suppose we would like to know if any given number is an even number. \
+  We can use modulus here to help us out. If the remainder is 1, not zero, then we know it is an odd number. \
+  Increment (++) \
+  <br> ++ is a shortcut to increment a variable that is storing a number by 1.\
+  <br> var x = 10;\
+  <br> x++ , will return 11;\
+  <br> We can also get really clever and increment by 2 by using x+=2.\
+  <br>\
+  <br>Decrement (--)\
+  <br> -- is a shortcut to decrement (decrease) a variable that is storing a number by 1.\
+  <br> var x = 0;\
+  <br> x-- , will return -1;\
+  <br>\
+  Enough reading.  Time for a challenge.  In the editor, write the result of 21 % 10.  \
+  <br>$$", 
+  "hint1": "What does that % mean again?  Check above.  To be really cool you could say 21 mod 10.",
+  "hint2": "If you divide 21 by 10, what would the remainder be?",
+  "testCode": 5,
+  "pointValue": 300
 } 
 
 
@@ -912,35 +862,23 @@ var test = function(userCode){
 // integers/numbers
 
 {
-  title: "+2 to that price!",
-  content: 'function a(){\n //variables \n\t var priceOfCoat = 3; \n\t "This coat cost" + priceOfCoat + "dollars"; \n\t "The total cost for this purchase with tax" \n\t//no need to have or use keyword return }',
-  instructions: "One data type in javascript is a Number. Numbers in javascript are numeric values we use in math, so we can do add, subtract, divide or multiply with them./
-  <br> Try it out in your console.log(). 3 + 3 will give you 6. However, if we wrap the number 3 inside quotes, '3' javascript will do what is called a type conversion. '3' tell javascript to change /
-  from a number data type into a string data type. So, when we try to add '3' to 3, we will get '33' instead of 6. Wierd, right? But wait, there is an advantage for this though, say you decared a variable call priceOfCoat to be 5. /
-  and you want to be able to print out the statement, 'This coat cost x amount of dollars.'. Rather then hardcording(writing) the number 3, you can store it in a variable. That way, next time, changing the price will be easy. /
-  In this scenario, using the (+) in this case will allow you to join data types together, whether be are strings or number. 
-  <br>
-  <br> var price = 3;
-  <br> This coat costs' + priceOfCoat + 'dollars';
-  <br> This will return 'This coat costs 3 dollars'. Notice that the data we stored in the variable is a number, but because we are using (+) with a string /
-  3 is now a string ('3').
-  <br> What if we want to join a number with a string and expect the join of the two to be a number?
-  <br> For example: '3' + 5 = 8;
-  <br> To do this, we need to add an extra (+) infront of the '3' to tell javascript to convert it back into a number from a string.
-  <br> So +'3' + 5 will give us 8 instead of 35.
-  <br>
-  <br> Expanding on the example above, add a variable call taxes and set it hold the number 2./
-  <br>Complete the statement by using the taxes variable and adding to priceOfCoat, /
-  so the results should be:
-  <br>'This coat costs 3 dollars. The total cost for this purchase with tax is 7 dollars'
-   ",
-  hints1: "Make sure you are wrapping your strings with quotes, either single (') or doubles(""), and not on the variables",
-  hints2:  "Are you missing an additional (+) operator ?",
-  testCode: ,
-  pointValue: 50
+ "title": "1+1 Cool 2*2 School",
+ "content": "//enter code on next line",
+ "instructions": "Strings are fine and dandy, but sometimes you just need a number.  \
+ JavaScript has you covered.  You can use numbers and do math all within JavaScript.\
+ You can add (+), subtract (-), multiply (*) and divide (/). \
+ <br><br>Note that if you put a number in quotes, it becomes a string and no longer behaves the way you would expect.  \
+ For instance if you input \"2\" + \"5\" you would get \"25\" in return because the two strings would just be smooshed together. \
+ This smooshing is called \"concatenation\".  If you want to add 2 + 5 to get 7, you leave off the quotes. \
+ <br><br>Say you want to use JavaScript to write a text to your friend Caroline but all of your number keys are broken \
+ other than the number 1.  In the editor, write out the string \"2cool4school\" but only using the number 1.",
+ "hint1": "Your number 1 should NOT be in quotes in your code since you want to do regular addition.",
+ "hint2":  "Your answer should be in the form of: (6 + 6) + 'wordy' + (3 + 3 + 3) + 'more_wordy'.",
+ "testCode": 2,
+ "pointValue": 150
 }
 
-// logical operators
+// logical operators  and/or
 {
   title: "Ice cream for Jane",
   content: 'function iceCream(){\n\n var janesChoice ;var vanilla = true, var chocoloate = true; var strawberry = false; ; \nvar doubleScoopIcecreamCone = true; \njanesChoice = //write the logical expression here \n\n//no need to have or use keyword return }',
@@ -976,31 +914,36 @@ var test = function(userCode){
 // BOOLEANS 
 
 {
-  title: "Billions of booleans",
-  content: 'var test1 = 5 < 3;\n var result1 = // add the correct boolean here!;\n\nvar test2 = 10 > 6;\n var result2 = // add the correct boolean here!;\n\n',
-  instructions: "At this point, you've already seen several primitive data types, including strings, numbers, and objects. Another common \
-  data type is a boolean, which simply distinguishes between two possibilities: `true` or `false`. Notice that these values are \
-  neither strings nor variables - they are their own type altogether. Booleans are particularly useful for comparisons, such as `3 > 2` \
-  or `3 < 2`. The > and < signs are the traditional symbols for “is greater than” and “is less than”, respectively. So `3 > 2` evaluates \
-  to `true`, and 3 < 2 evaluates to `false`.<br><br>In the editor, assign the correct boolean to `result1` and `result2` based on the \
-  corresponding `test1` and `test2` comparisons.",
-  hint1: "Remember that since `true` and `false` aren't strings, they don't require quotation marks. ",
-  hint2: "The value of `result1` should equal the value of `test`. So if `result3 = 6 < 12`, then `test3 = true` would be the correct assignment.",
-  testCode: 6,
-  pointValue: 100
+  "title": "Which Wand?",
+  "content": "var wandCheck1 = 5 < 3;\n var wandResult1 = // add the correct boolean here and make sure to delete the \"//\";\n\nvar wandCheck2 = 10 > 6;\n var wandResult2 = // add the correct boolean here and make sure to delete the \"//\";\n\n",
+  "instructions": "At this point, you have already seen several data types, including strings and numbers. Another common \
+  data type is a boolean.  Boolean is just a fancy word for the category that includes true and false. True and false are \
+  neither strings nor variables - they are their own type altogether. So, you do not put true or false in quotes.  They stand all on their own. \
+  Booleans are particularly useful for comparisons, such as 3 > 2 \
+  or 3 < 2. The > and < signs are the traditional symbols for is greater than and is less than, respectively. So 3 > 2 evaluates \
+  to true, and 3 < 2 evaluates to false.  \
+  <br><br>Imagine you are strolling down Diagon Alley and you wander into Ollivander\"s to check out the new wands. \
+  You are shocked to find the whole store in disarray.  You want to help Ollivander sort the wands by length.  \
+  You have the lengths, but you need to determine which length is greater when comparing two wands. \
+  In the editor, assign the correct boolean to wandResult1 and wandResult2 based on the \
+  corresponding wandCheck1 and wandCheck2 comparisons. Have at it, Hermione.",
+  "hint1": "Remember that since true and false are not strings, they do not require quotation marks.",
+  "hint2": "wandResult1 should be true if 5 is less than 3.  If 5 is not less than 3, wandResult1 should be false.",
+  "testCode": 4,
+  "pointValue": 200
 }
 
 var test = function(userCode){
   var result = {
     pass: false,
-    message: "Looks like your code wasn't quite right. Please try again!"
+    message: "Looks like your code wasn't quite right. Please try again!  These wands are a mess!"
   }
 
   var codeResponse = eval(userCode);
 
   if (result1 === false && result2 === true){
     result.pass = true;
-    result.message = "Congratulations! You passed!";
+    result.message = "Congratulations! You passed! Off to get a mug of butterbeer!";
   }
 
   if (typeof result1 === "string" || typeof result2 === "string"){
